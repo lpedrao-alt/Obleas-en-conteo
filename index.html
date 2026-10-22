@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#42276f">
+  <title>Obleas Express | Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Obleas Express, inicio">
+      <span class="brand-wafer" aria-hidden="true">🧇</span>
+      <span class="brand-name">Obleas <em>Express♡</em></span>
+    </a>
+    <nav class="nav">
+      <a class="nav-link active" href="#inicio"><span>⌂</span> Inicio</a>
+      <a class="nav-link" href="#calculadora"><span>▦</span> Calculadora</a>
+      <a class="nav-link" href="#acerca"><span>ⓘ</span> Acerca de</a>
+    </nav>
+    <div class="top-note">♡ ¡El antojo también<br>se calcula! ♥</div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">UN ANTOJITO MUY DULCE</p>
+        <h1>Calcula el valor total<br>de tus <span>obleas</span> <b>♥</b></h1>
+        <p>Ingresa el precio de cada oblea y la cantidad<br class="desktop-only"> que deseas comprar. ¡Nosotros hacemos el resto!</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustración de obleas">
+        <div class="spark s1">✦</div><div class="spark s2">♡</div>
+        <div class="wafer wafer-back"></div>
+        <div class="wafer wafer-front"></div>
+        <div class="wafer wafer-top"><span></span></div>
+        <div class="speech">¡Úsalas,<br>disfrútalas! ♡</div>
+      </div>
+    </section>
+
+    <section class="workspace" id="calculadora">
+      <div class="calculator-card">
+        <div class="section-heading"><span class="heading-icon">🛒</span><h2>Datos de la compra</h2></div>
+        <form id="purchase-form" class="form-panel">
+          <div class="field">
+            <label for="price">ⓢ &nbsp; Precio por oblea ($)</label>
+            <input id="price" name="price" type="number" min="1" step="1" placeholder="Ej. 2000" required>
+          </div>
+          <div class="field">
+            <label for="quantity">▤ &nbsp; Cantidad de obleas</label>
+            <input id="quantity" name="quantity" type="number" min="1" step="1" placeholder="Ej. 3" required>
+          </div>
+          <p class="error-message" id="error-message" role="alert"></p>
+          <button class="calculate-button" type="submit"><span>▦</span> Calcular total <i>✧</i></button>
+        </form>
+      </div>
+
+      <aside class="total-card" aria-live="polite">
+        <div class="section-heading"><span class="heading-icon">♧</span><h2>Total a pagar</h2></div>
+        <div class="total-amount" id="total-amount">$0</div>
+        <div class="equation"><span>ⓢ</span><strong id="equation">Ingresa los datos de tu compra</strong></div>
+      </aside>
+    </section>
+
+    <section class="list-card">
+      <div class="list-heading">
+        <div class="section-heading"><span class="list-icon">☷</span><h2>Lista de compras</h2></div>
+        <p>✧ ¡Tus obleas, en un solo lugar! ♥</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Cantidad</th><th>Precio por oblea</th><th>Total</th><th>Acciones</th></tr></thead>
+          <tbody id="purchase-list">
+            <tr class="empty-row"><td colspan="5">Todavía no tienes compras. ¡Agrega la primera! ♡</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="list-actions">
+        <button class="secondary-button" id="clear-button" type="button">▤ &nbsp; Limpiar</button>
+        <button class="new-button" id="new-button" type="button"><span>＋</span> Nueva compra</button>
+      </div>
+    </section>
+
+    <section class="about" id="acerca">
+      <h2>Obleas Express</h2>
+      <p>Una forma fácil, rápida y dulce de calcular cuánto vas a pagar.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><span class="footer-heart">♥</span><div><strong>Obleas Express</strong><small>Dale vida a tu antojo</small></div></div>
+    <div class="footer-doodles">🧇　♡　☺</div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
